@@ -1,0 +1,29 @@
+{
+  "name": "ota-ingredients-front-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "styled-components": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ota-ingredients/ota-ingredients-front-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ota-ingredients/ota-ingredients-front-end/issues"
+  },
+  "homepage": "https://github.com/ota-ingredients/ota-ingredients-front-end#readme",
+  "description": ""
+}
