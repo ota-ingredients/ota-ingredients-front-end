@@ -9,4 +9,6 @@ RUN npm install
 ADD package.json /app/front-end/package.json
 ENV PATH /app/front-end/node_modules/.bin:$PATH
 
+RUN npm run build
+
 CMD [ "npm", "start" ]
