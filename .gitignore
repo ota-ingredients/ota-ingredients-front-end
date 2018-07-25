@@ -76,5 +76,10 @@ typings/
 # Serverless directories
 .serverless
 
+# Environment Configuration
+.env.local
+.env.development
+.env.production
+
 
 # End of https://www.gitignore.io/api/node
