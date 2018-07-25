@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run: docker image build -t ingredients/front-end
+      - run: docker push ingredients/front-end
+  
+  deploy:
+    machine: true
+    steps:
+      - checkout
+      - run: |
+          ssh centos@54.169.180.125 \
+            'sudo docker pull ingredients/front-end && \
+             sudo docker container rm -f ingredients/front-end || true \
+             sudo docker container run \
+             --rm -ditp 6000:3000 \
+             --name ingredients_front_end ingredients/front-end'
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
