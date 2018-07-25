@@ -15,7 +15,7 @@ jobs:
       - run: |
           ssh centos@54.169.180.125 \
             'sudo docker pull ingredients/front-end && \
-             sudo docker container rm -f ingredients/front-end || true \
+             sudo docker container rm -f ingredients/front-end || true && \
              sudo docker container run \
              --rm -ditp 6000:3000 \
              --name ingredients_front_end ingredients/front-end'
