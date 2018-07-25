@@ -8,7 +8,6 @@ COPY . .
 RUN npm install
 ADD package.json /app/front-end/package.json
 ENV PATH /app/front-end/node_modules/.bin:$PATH
-ENV NODE_ENV=production
 
 RUN npm run build
 
