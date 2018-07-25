@@ -5,7 +5,7 @@ jobs:
     steps:
       - checkout
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker image build -t ingredients/front-end
+      - run: docker image build -t ingredients/front-end .
       - run: docker push ingredients/front-end
   
   deploy:
