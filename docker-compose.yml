@@ -1,0 +1,13 @@
+version: '3.2'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app/front-end
+      - ./node_modules:/app/front-end/node_modules
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    command: node server.js
+    ports: 
+      - "3000:3000"
